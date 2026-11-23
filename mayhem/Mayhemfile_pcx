@@ -1,0 +1,9 @@
+project: savantenvs/yquake2
+target: pcx
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/pcx/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_pcx
+    libfuzzer: true
+    timeout: 5

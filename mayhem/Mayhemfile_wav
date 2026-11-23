@@ -1,0 +1,9 @@
+project: savantenvs/yquake2
+target: wav
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/wav/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/wav_file @@
+    afl: true
+    timeout: 5

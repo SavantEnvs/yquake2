@@ -1,0 +1,9 @@
+project: savantenvs/yquake2
+target: cfg
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/cfg/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/cfg_file @@
+    afl: true
+    timeout: 10

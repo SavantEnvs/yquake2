@@ -1,0 +1,9 @@
+project: savantenvs/yquake2
+target: bsp
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/bsp/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/bsp_file @@
+    afl: true
+    timeout: 5

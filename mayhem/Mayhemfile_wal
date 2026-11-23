@@ -1,0 +1,9 @@
+project: savantenvs/yquake2
+target: wal
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/wal/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/fuzz_wal
+    libfuzzer: true
+    timeout: 5

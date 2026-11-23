@@ -1,0 +1,9 @@
+project: savantenvs/yquake2
+target: savegame-level
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/savegame-level/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/savegame_file level @@
+    afl: true
+    timeout: 5

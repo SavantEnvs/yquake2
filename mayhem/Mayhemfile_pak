@@ -1,0 +1,9 @@
+project: savantenvs/yquake2
+target: pak
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/pak/testsuite
+cmds:
+  - cmd: /mayhem/mayhem/out/pak_file @@
+    afl: true
+    timeout: 10
